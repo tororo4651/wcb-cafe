@@ -1,0 +1,42 @@
+// ベース
+@use "bases/_bases.scss";
+
+
+// レイアウト
+@use "layouts/layouts.scss";
+
+
+// コンポーネント・パーツ
+// ボタン
+@use "components/parts/_btns.scss";
+
+
+// コンポーネント・共通
+// ヘッダー
+@use "components/common/header";
+// グローバルナビゲーション
+@use "components/common/_gnav.scss";
+// サイドバー
+@use "components/common/sidebar";
+// フッター
+@use "components/common/_footer";
+// SNS
+@use "components/common/sns";
+
+
+// コンポーネント・その他
+// ヒーローイメージ
+@use "components/other/heroes/hero";
+// 記事・ニュース
+@use "components/other/articles/_news-article.scss";
+// リスト・写真
+@use "components/other/lists/photo-list";
+// セクション・お問い合わせ
+@use "components/other/sections/_contact-section.scss";
+// フォーム・お問い合わせ
+@use "components/other/forms/_contact-form.scss";
+
+
+// ページ
+// ニュース
+@use "pages/_news.scss";

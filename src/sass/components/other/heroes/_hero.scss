@@ -1,0 +1,110 @@
+// ヒーローイメージ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.hero {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+
+  &__heading {
+    margin-bottom: 10px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 42px;
+    font-size: 1.125rem;
+  }
+
+  // トップページ
+  &--top {
+    background-image: url(../images/top/main-bg.jpg);
+
+    .hero__content {
+      margin-top: 10%;
+      text-align: center;
+    }
+
+    .hero__heading {
+      text-transform: none;
+    }
+  }
+
+  // ニュースページ
+  &--news {
+    height: 270px;
+    background-image: url(../images/news/news-bg.jpg);
+
+    .hero__heading {
+      text-align: center;
+    }
+  }
+
+  // メニューページ
+  &--menu {
+    background-image: url(../images/menu/menu-bg.jpg);
+
+    .hero__content {
+      max-width: 560px;
+      padding: 0 4%;
+      margin: 10% auto 0;
+    }
+
+    .hero__heading {
+      text-align: center;
+    }
+  }
+
+  // お問い合わせページ
+  &--contact {
+    background-image: url(../images/contact/contact-bg.jpg);
+
+    .hero__heading {
+      margin-bottom: 0;
+    }
+  }
+
+
+  @include g.mq(sm-max) {
+
+    &__heading {
+      font-size: 2.5rem;
+    }
+
+    // トップページ
+    &--top {
+      .hero__content {
+        margin-top: 20%;
+      }
+    }
+
+    // ニュースページ
+    &--news {
+      .hero__content {
+        margin-top: 30px;
+      }
+    }
+
+    // メニューページ
+    &--menu {
+      .hero__content {
+        margin-top: 20%;
+      }
+    }
+
+    // お問い合わせページ
+    &--contact {
+      .hero__content {
+        margin-top: 40px;
+      }
+    }
+  }
+}

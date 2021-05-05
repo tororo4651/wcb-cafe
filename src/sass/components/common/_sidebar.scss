@@ -1,0 +1,40 @@
+// サイドバー
+
+
+// 変数、ミックスイン、関数
+@use "../../global" as g;
+
+
+.sidebar {
+
+  &__section {
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__heading {
+    border-bottom: solid 2px g.$accentColor;
+    padding: 0 0.4rem 0.5rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+
+  &__item {
+    border-bottom: solid 1px #ddd;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px;
+
+    &:hover {
+      color: g.$accentColor;
+    }
+  }
+
+  &__text {
+    padding: 12px 10px;
+  }
+}

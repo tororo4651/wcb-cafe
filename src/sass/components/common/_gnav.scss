@@ -1,0 +1,46 @@
+// グローバルナビゲーション
+
+
+// 変数、ミックスイン、関数
+@use "../../global" as g;
+
+
+.gNav {
+  margin-top: 34px;
+
+  &__list {
+    display: flex;
+    margin-right: -36px;
+  }
+
+  &__item {
+    margin-right: 36px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+
+    &:hover {
+      color: g.$accentColor;
+    }
+  }
+
+
+  @include g.mq(sm-max) {
+
+    margin-top: 10px;
+
+    &__list {
+      margin-right: 0;
+    }
+
+    &__item {
+      margin: 0 20px;
+    }
+
+    &__link {
+      font-size: 1rem;
+    }
+  }
+}

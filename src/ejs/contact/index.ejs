@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('../components/common/_head.ejs', {page_title: 'お問い合わせフォーム', stylePath: '../css'}) %>
+
+<body class="contact">
+
+<div class="hero hero--contact">
+  <%- include('../components/common/_header', {linkPath: '../', logoPath: '../images/common/logo.svg', newsPath: '../news', menuPath: '../menu', contactPath: './'}) %>
+
+  <div class="hero__content l-wrapper">
+    <h2 class="hero__heading">Contact</h2>
+
+    <form class="hero__form contactForm" action="#" method="post">
+      <div class="contactForm__item">
+        <label class="contactForm__label" for="name">お名前</label>
+
+        <input class="contactForm__input" id="name" type="text" name="name">
+      </div><!-- /.contactForm__item -->
+
+      <div class="contactForm__item">
+        <label class="contactForm__label" for="email">メールアドレス</label>
+
+        <input class="contactForm__input" id="email" type="email" name="email">
+      </div><!-- /.contactForm__item -->
+
+      <div class="contactForm__item">
+        <label class="contactForm__label" for="message">メッセージ</label>
+
+        <textarea class="contactForm__message" id="message" type="text" name="message"></textarea>
+      </div><!-- /.contactForm__item -->
+
+      <input class="contactForm__send primaryBtn primaryBtn--send" type="submit" name="send" value="送信">
+    </form>
+  </div><!-- /.hero__content -->
+
+</div><!-- /.hero.hero--contact -->
+
+<section class="contactSection l-wrapper">
+  <div class="contactSection__content">
+    <h3 class="contactSection__heading">カフェ 東駅前店</h3>
+
+    <address class="contactSection__address">
+      住所： 東京都〇〇区<br>
+      〇〇〇〇〇〇〇 000-22-1<br>
+      〇〇〇〇<br>
+      電話： 03-1111-1111<br>
+      営業時間： 10:00〜20:00<br>
+      休日：水曜
+    </address>
+  </div><!-- /.contactSection__content -->
+
+  <iframe class="contactSection__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.4471894579833!2d139.73466315138376!3d35.66598938010076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b835942e165%3A0xb4897f1f4264c771!2z44CSMTA2LTAwMzIg5p2x5Lqs6YO95riv5Yy65YWt5pys5pyo77yS5LiB55uu77yU4oiS77yV!5e0!3m2!1sja!2sjp!4v1620189565996!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<aside class="sns">
+  <div class="sns__list l-wrapper">
+    <div class="sns__item">
+      <h3 class="sns__heading">Facebook</h3>
+
+      <iframe class="sns__facebook"
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fwebcreatorbox.fb%2F&tabs=timeline&width=340&height=315&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=229812980409867"
+        width="340"
+        height="315"
+        style="border: none; overflow: hidden"
+        scrolling="no"
+        frameborder="0"
+        allowTransparency="true"
+        allow="encrypted-media">
+      </iframe>
+    </div><!-- /.sns__item -->
+
+    <div class="sns__item">
+      <h3 class="sns__heading">Twitter</h3>
+
+      <a class="twitter-timeline" data-height="315" href="https://twitter.com/kei_life_t?ref_src=twsrc%5Etfw">Tweets by kei_life_t</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div><!-- /.sns__item -->
+
+    <div class="sns__item">
+      <h3 class="sns__heading">YouTube</h3>
+
+      <iframe class="sns__youtube" width="560" height="315" src="https://www.youtube.com/embed/Wc7qGegBbUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div><!-- /.sns__item -->
+  </div><!-- /.sns__list -->
+</aside>
+
+
+<%- include('../components/common/_footer') %>
+
+</body>
+</html>

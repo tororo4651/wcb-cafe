@@ -1,0 +1,43 @@
+// ページ・ニュース
+
+
+// 変数、ミックスイン、関数
+@use "../global" as g;
+
+
+.news {
+
+  &__hero {
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__article {
+    width: 74%;
+  }
+
+  &__sidebar {
+    width: 22%;
+  }
+
+
+  @include g.mq(sm-max) {
+    &__content {
+      display: block;
+    }
+
+    &__article,
+    &__sidebar {
+      width: auto;
+    }
+
+    &__article {
+      margin-bottom: 76px;
+    }
+  }
+}

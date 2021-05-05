@@ -1,0 +1,15 @@
+// リスト・写真
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.photoList {
+  padding-top: 6%;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+  gap: 26px;
+}

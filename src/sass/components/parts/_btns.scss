@@ -1,0 +1,22 @@
+// パーツ
+
+// 変数、ミックスイン、関数
+@use "../../global" as g;
+
+
+// ボタン
+.primaryBtn {
+  padding: 18px 32px;
+  border-radius: 5px;
+  background-color: g.$accentColor;
+  color: g.$whiteColor;
+  font-size: 1.375rem;
+
+  &--send {
+    line-height: 1;
+  }
+
+  &:hover {
+    background-color: #0090aa;
+  }
+}

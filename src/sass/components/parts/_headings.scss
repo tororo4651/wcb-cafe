@@ -1,0 +1,107 @@
+// 見出し
+
+
+// ミックスイン
+@use "../../global" as g;
+
+
+// プライマリ
+.primaryHeading {
+  padding-bottom: 10px;
+  background-size: 6px 6px;
+  background-image: linear-gradient(
+    45deg,
+    #fff 30%,
+    #ccc 30%,
+    #ccc 50%,
+    #fff 50%,
+    #fff 80%,
+    #ccc 80%,
+    #ccc 100%
+  );
+
+  &__inner {
+    padding: 0 0.5rem 0.875rem;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.5;
+    background-color: #fff;
+  }
+
+  &__link {
+    &:hover {
+      color: #605c55;
+    }
+  }
+}
+
+
+// セカンダリ
+.secondaryHeading {
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 5px;
+    margin-top: 2rem;
+    background-color: #d0bea2;
+  }
+
+  &--center {
+    text-align: center;
+
+    &::after {
+      margin: 2.5rem auto 0;
+    }
+  }
+
+  @include g.mq(md-min) {
+    font-size: 1.875rem;
+  }
+}
+
+
+// ターシャリ
+.tertiaryHeading {
+  font-family: impact, serif;
+  font-size: 3rem;
+  text-align: center;
+
+  &--orange,
+  &--blue {
+    background-clip: text;
+    // color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+
+  &--orange {
+    background-image: linear-gradient(
+      180deg,
+      var(--yellow) 0%,
+      var(--orange) 100%
+    );
+  }
+
+  &--blue {
+    background-image: linear-gradient(
+      180deg,
+      var(--lightBlue),
+      var(--blue)
+    );
+  }
+
+  &--white {
+    color: var(--white);
+  }
+
+
+  @include g.mq(md-min) {
+    font-size: 5rem;
+  }
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('components/common/_head.ejs', {page_title: 'トップページ', stylePath: 'css'}) %>
+
+<body class="top">
+
+<div class="hero hero--top">
+  <%- include('components/common/_header.ejs', {linkPath: 'index.html', logoPath: 'images/common/logo.svg', newsPath: 'news', menuPath: 'menu', contactPath: 'contact'}) %>
+
+  <div class="hero__content l-wrapper">
+    <h2 class="hero__heading">We'll Make Your Day</h2>
+
+    <p class="hero__text">おしゃれなカフェで癒やされてみませんか？無添加の食材で体の中からリフレッシュ。</p>
+
+    <a class="hero__btn primaryBtn" href="menu/">メニューを見る</a>
+  </div><!-- .hero__content.l-wrapper -->
+</div><!-- /.hero.hero--top -->
+
+</body>
+</html>

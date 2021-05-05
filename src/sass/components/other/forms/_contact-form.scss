@@ -1,0 +1,44 @@
+// フォーム・お問い合わせ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.contactForm {
+
+  &__item {
+    margin-bottom: 14px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.125rem;
+  }
+
+  &__input {
+    width: 240px;
+    padding: 10px;
+    border: solid 1px g.$whiteColor;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  &__message {
+    width: 480px;
+    height: 6rem;;
+    padding: 10px;
+    border: solid 1px g.$whiteColor;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+
+  @include g.mq(sm-max) {
+    &__input,
+    &__message {
+      width: 100%;
+    }
+  }
+}
